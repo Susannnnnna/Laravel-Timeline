@@ -3,7 +3,17 @@
 //window._ = _;
 
 import 'bootstrap';
-window.$ = window.jQuery = require('jquery');
+
+try {
+    windows.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('jquery');
+    window.Swal = require('sweetalert2')
+
+    require('bootstrap');
+} catch (e) {}
+
+
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
