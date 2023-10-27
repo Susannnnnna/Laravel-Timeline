@@ -37,7 +37,7 @@
                     <td>{{ $event->description }}</td>
                     <td>{{ $event->link }}</td>
                     <td>{{ $event->category_name_id }}</td>
-                    <td>{{ $event->ilustration_path_id }}</td>
+                    <td>{{ $event->image_path }}</td>
                     <td>
                         <a href="{{ route('events.edit', $event->id) }}">
                             <button class="btn btn-success btn-sm">

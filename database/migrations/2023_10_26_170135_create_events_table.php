@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('link');
             $table->string('description', 2000);
             $table->integer('category_name_id')->nullable();
-            $table->integer('ilustration_path_id')->nullable();
             $table->timestamps();
         });
     }

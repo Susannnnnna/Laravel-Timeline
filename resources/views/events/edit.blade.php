@@ -8,7 +8,7 @@
                 <div class="card-header">Edit event</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('events.update', $event->id) }}">
+                    <form method="POST" action="{{ route('events.update', $event->id) }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
@@ -82,19 +82,17 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="ilustration_path_id" class="col-md-4 col-form-label text-md-end">Ilustration</label>
+                            <label for="image_path" class="col-md-4 col-form-label text-md-end">Ilustration</label>
 
                             <div class="col-md-6">
-                                <input id="ilustration_path_id" type="ilustration_path_id" class="form-control @error('ilustration_path_id') is-invalid @enderror" name="ilustration_path_id" value="{{ $event->ilustration_path_id }}" required autocomplete="ilustration_path_id">
-
-                                @error('ilustration_path_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="image_path" type="file" class="form-control" name="image_path" value="{{ $event->image_path }}">
                             </div>
                         </div>
-
+                        <div class="row mb-3 justify-content-center">
+                            <div class="col-md-6">
+                                <img src="{{ asset('storage/' . $event->image_path) }}" alt="event_image">
+                            </div>
+                        </div>
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

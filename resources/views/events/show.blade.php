@@ -51,10 +51,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="ilustration_path_id" class="col-md-4 col-form-label text-md-end">Ilustration</label>
+                            <label for="image_path" class="col-md-4 col-form-label text-md-end">Ilustration</label>
 
                             <div class="col-md-6">
-                                <input id="ilustration_path_id" type="ilustration_path_id" class="form-control" name="ilustration_path_id" value="{{ $event->ilustration_path_id }}">
+                                <input id="image_path" type="image_path" class="form-control" name="image_path" value="{{ $event->image_path }}">
                             </div>
                         </div>
                     </form>

@@ -40,6 +40,9 @@ class EventController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $event = new Event($request->all());
+        if ($request->hasFile('image_path')) {
+            $event->image_path = $request->file('image_path')->store('events');
+        }
         $event->save();
         return redirect(route('events.index'));
     }
@@ -79,6 +82,9 @@ class EventController extends Controller
     public function update(Request $request, Event $event): RedirectResponse
     {
         $event->fill($request->all());
+        if ($request->hasFile('image_path')) {
+            $event->image_path = $request->file('image_path')->store('events');
+        }
         $event->save();
         return redirect(route('events.index'));
     }

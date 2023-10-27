@@ -20,6 +20,6 @@ class Event extends Model
         'link',
         'description',
         'category_name_id',
-        'ilustration_path_id'    
+        'image_path'    
     ];
 }
