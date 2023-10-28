@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\EventCategory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -17,6 +18,8 @@ class WelcomeController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('welcome')->with('events', $events);
+        return view('welcome', [
+            'categories' => EventCategory::all()
+        ])->with('events', $events);
     }
 }

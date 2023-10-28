@@ -11,6 +11,7 @@ use Illuminate\Validation\Validator;
 use Illuminate\Validation\ValidationException;
 use App\Http\Requests\UpsertEventRequest;
 use App\Models\EventCategory;
+use Illuminate\Support\Facades\Gate;
 
 
 class EventController extends Controller
