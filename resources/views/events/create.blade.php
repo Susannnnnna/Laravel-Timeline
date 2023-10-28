@@ -43,7 +43,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-end">Description</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" maxlength="2000" class="form-control @error('description') is-invalid @enderror" name="description" autofocus>{{ old('description') }}</textarea>
+                                <textarea id="description" maxlength="2000" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autofocus>{{ old('description') }}</textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                             <label for="link" class="col-md-4 col-form-label text-md-end">Link</label>
 
                             <div class="col-md-6">
-                                <input id="link" type="text" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link') }}" required autocomplete="link" autofocus>
+                                <input id="link" type="text" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link') }}" autocomplete="link" autofocus>
 
                                 @error('link')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                             <label for="category_name_id" class="col-md-4 col-form-label text-md-end">Category</label>
 
                             <div class="col-md-6">
-                                <input id="category_name_id" type="category_name_id" class="form-control @error('category_name_id') is-invalid @enderror" name="category_name_id" value="{{ old('category_name_id') }}" required autocomplete="category_name_id">
+                                <input id="category_name_id" type="category_name_id" class="form-control @error('category_name_id') is-invalid @enderror" name="category_name_id" value="{{ old('category_name_id') }}" autocomplete="category_name_id">
 
                                 @error('category_name_id')
                                     <span class="invalid-feedback" role="alert">
@@ -85,7 +85,13 @@
                             <label for="image_path" class="col-md-4 col-form-label text-md-end">Ilustration</label>
 
                             <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control" name="image_path">
+                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path">
+
+                                @error('image_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 

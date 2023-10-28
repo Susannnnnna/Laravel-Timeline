@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Validation\Validator;
+use Illuminate\Validation\ValidationException;
+use App\Http\Requests\UpsertEventRequest;
 
 class EventController extends Controller
 {
@@ -37,9 +41,9 @@ class EventController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function store(Request $request): RedirectResponse
+    public function store(UpsertEventRequest $request): RedirectResponse
     {
-        $event = new Event($request->all());
+        $event = new Event($request->validated());
         if ($request->hasFile('image_path')) {
             $event->image_path = $request->file('image_path')->store('events');
         }
@@ -79,9 +83,9 @@ class EventController extends Controller
      * @param Event $event
      * @return RedirectResponse
      */
-    public function update(Request $request, Event $event): RedirectResponse
+    public function update(UpsertEventRequest $request, Event $event): RedirectResponse
     {
-        $event->fill($request->all());
+        $event->fill($request->validated());
         if ($request->hasFile('image_path')) {
             $event->image_path = $request->file('image_path')->store('events');
         }

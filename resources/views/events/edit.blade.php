@@ -43,7 +43,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-end">Description</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" maxlength="2000" class="form-control @error('description') is-invalid @enderror" name="description" autofocus>{{ $event->description }}</textarea>
+                                <textarea id="description" maxlength="2000" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ $event->description }}" required autofocus>{{ $event->description }}</textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
@@ -85,12 +85,21 @@
                             <label for="image_path" class="col-md-4 col-form-label text-md-end">Ilustration</label>
 
                             <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control" name="image_path" value="{{ $event->image_path }}">
+                                
+                                    <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path" value="{{ $event->image_path }}">
+                                
+                                @error('image_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
-                        <div class="row mb-3 justify-content-center">
+                        <div class="row mb-3  justify-content-center">
                             <div class="col-md-6">
-                                <img src="{{ asset('storage/' . $event->image_path) }}" alt="event_image">
+                                @if(!is_null($event->image_path))
+                                    <img src="{{ asset('storage/' . $event->image_path) }}" alt="event_photo">
+                                @endif
                             </div>
                         </div>
                         <div class="row mb-0">

@@ -11,7 +11,7 @@
                         <div class="col-sm-6 news-item">
                             <div class="news-content">
                                 <div class="date">
-                                    <p>{{ $event->event_date }}</p>
+                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
                                 </div>
                                 <h2 class="news-title">{{ $event->name }}</h2>
                                 <div class="news-media">
@@ -20,6 +20,26 @@
                                         <a class="colorbox cboxElement" href="#">
                                             <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration">
                                         </a>
+                                    @endif
+                                </div>
+                                <p>{{ $event->description }}</p>
+                                <a class="read-more" href="{{ $event->link }}">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 news-item right">
+                            <div class="news-content">
+                                <div class="date">
+                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
+                                </div>
+                                <h2 class="news-title">{{ $event->name }}</h2>
+                                <div class="news-media gallery">
+                                    @if(!is_null($event->image_path))
+                                    @else
+                                    <a class="colorbox cboxElement" href="#">
+                                        <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration_right">
+                                    </a>
+                                    <a class="colorbox cboxElement" href="#"></a>
                                     @endif
                                 </div>
                                 <p>{{ $event->description }}</p>
