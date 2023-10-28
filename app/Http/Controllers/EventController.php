@@ -10,6 +10,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\Validator;
 use Illuminate\Validation\ValidationException;
 use App\Http\Requests\UpsertEventRequest;
+use App\Models\EventCategory;
+
 
 class EventController extends Controller
 {
@@ -32,7 +34,9 @@ class EventController extends Controller
     public function create(): View
     {
         $events = Event::all();
-        return view('events.create')->with('events', $events);
+        return view('events.create', [
+            'categories' => EventCategory::all()
+        ])->with('events', $events);
     }
 
     /**
@@ -72,7 +76,8 @@ class EventController extends Controller
     public function edit(Event $event): View
     {
         return view('events.edit', [
-            'event' =>$event
+            'event' =>$event,
+            'categories' => EventCategory::all()
         ]);
     }
 

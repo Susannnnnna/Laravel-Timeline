@@ -43,10 +43,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="category_name_id" class="col-md-4 col-form-label text-md-end">Category</label>
+                            <label for="category_id" class="col-md-4 col-form-label text-md-end">Category</label>
 
                             <div class="col-md-6">
-                                <input id="category_name_id" type="category_name_id" class="form-control" name="category_name_id" value="{{ $event->category_name_id }}">
+                                <input id="category_id" type="category_id" class="form-control" name="category_id" value="{{ $event->category_id }}">
                             </div>
                         </div>
 

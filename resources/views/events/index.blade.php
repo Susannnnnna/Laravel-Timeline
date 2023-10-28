@@ -36,7 +36,11 @@
                     <td>{{ $event->event_date }}</td>
                     <td>{{ $event->description }}</td>
                     <td>{{ $event->link }}</td>
-                    <td>{{ $event->category_name_id }}</td>
+                    <td>
+                        @if($event->hasCategory())
+                            {{ $event->category->name }}
+                        @endif
+                    </td>
                     <td>{{ $event->image_path }}</td>
                     <td>
                         <a href="{{ route('events.edit', $event->id) }}">

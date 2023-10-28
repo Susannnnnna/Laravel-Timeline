@@ -17,7 +17,6 @@ return new class extends Migration
             $table->date('event_date');
             $table->string('link')->nullable();
             $table->string('description', 2000);
-            $table->integer('category_name_id')->nullable();
             $table->timestamps();
         });
     }

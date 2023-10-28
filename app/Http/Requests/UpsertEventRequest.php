@@ -29,7 +29,7 @@ class UpsertEventRequest extends FormRequest
             'event_date' => 'required|date',
             'link' => 'nullable|string',
             'description' => 'required|max:2000',
-            'category_name_id' => 'nullable|integer'
+            'category_id' => 'nullable|integer|min:0'
         ];
     }
 }
