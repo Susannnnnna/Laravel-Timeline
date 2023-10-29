@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Timeline
 ![Application image - main page](./external_files/app_examples/main_page.png)
 
-# Timeline
 ## About
 Timeline is a simple web application where you can add your own events.
 When you are login you can add events and categories for this events.
@@ -21,8 +21,6 @@ When you are login you can add events and categories for this events.
   - [Used technologies](./README.md#used-technologies)
   - [Database](./README.md#database)
   - [Download the app](./README.md#download-the-app)
-- [Testing](./README.md#testing)
-- [Documentation](./README.md#documentation)
 - [Sources](./README.md#sources)
 - [Security](./README.md#security)
 - [Note](./README.md#note)
