@@ -15,10 +15,13 @@ class WelcomeController extends Controller
      * 
      * @return View
      */
-    public function index()
+    public function index(Request $request)
     {
+        $filters = $request->query('filter');
+
         $events = Event::all();
         return view('welcome', [
+            'events' => Event::orderBy('event_date', 'ASC')->get(),
             'categories' => EventCategory::all()
         ])->with('events', $events);
 

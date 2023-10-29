@@ -24,7 +24,9 @@ class EventController extends Controller
     public function index(): View
     {
         $events = Event::all();
-        return view('events.index')->with('events', $events);
+        return view('events.index', [
+            'events' => Event::orderBy('event_date', 'ASC')->get()
+        ])->with('events', $events);
     }
 
     /**

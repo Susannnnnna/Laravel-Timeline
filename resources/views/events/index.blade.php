@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            Events list
+        <h3>Events List</h3>
         </div>
         <div class="col-6 text-end">
             <a class="float-fight justify-left" href="{{ route('events.create') }}">
@@ -22,7 +22,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">Id</th>
+            <th scope="col">#</th>
             <th scope="col">Title</th>
             <th scope="col">Event date</th>
             <th scope="col">Description</th>

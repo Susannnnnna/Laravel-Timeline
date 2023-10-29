@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            Events categories list
+            <h3>Event Categories List</h3>
         </div>
         <div class="col-6 text-end">
             <a class="float-right" href="{{ route('event_categories.create') }}">
@@ -22,7 +22,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">Id</th>
+            <th scope="col">#</th>
             <th scope="col">Event category</th>
             <th scope="col">Description</th>
             <!-- <th scope="col">Link</th> -->

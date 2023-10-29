@@ -2,15 +2,19 @@
 
 @section('content')
 <div class="container">
+    <div class="col-6">
+            <h3>Users List</h3>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">Id</th>
+            <th scope="col">#</th>
             <th scope="col">Email</th>
-            <th scope="col">Imię</th>
-            <th scope="col">Nazwisko</th>
-            <th scope="col">Numer telefonu</th>
-            <th scope="col">Akcje</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Role</th>
+            <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +25,9 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->surname }}</td>
                     <td>{{ $user->phone_number }}</td>
+                    <td>{{ $user->role }}</td>
                     <td>
-                        <button class="btn btn-danger btn-sm delete" data-id="{{ $user->id }}">
+                        <button class="btn btn-outline-danger btn-sm delete" data-id="{{ $user->id }}">
                             Delete
                         </button>
                     </td>
