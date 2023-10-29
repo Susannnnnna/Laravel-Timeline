@@ -45,7 +45,7 @@ Examples of use - short demo or screen
 
 ### Database
 - Tinker
-- Insert directly in database. Here you can find [folder](./external-files) with examle data to insert.
+- Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
 
 ### Run the app
 Download files from githube from this repo
@@ -59,7 +59,7 @@ Download
 - Nodejs
 - Visual Studio (or any other IDE)
 
-Open app in IDE and run Apache and MySQL via XAMPP.
+Open app in IDE and run Apache and MySQL via XAMPP
 
 ## Sources
 
@@ -68,4 +68,4 @@ Open app in IDE and run Apache and MySQL via XAMPP.
 ## Note
 
 ## License
-[MIT license](https://opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT)
