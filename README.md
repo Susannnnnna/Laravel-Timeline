@@ -7,11 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-![Application image - main page]()
+![Application image - main page](./external_files/app_examples/main_page.png)
 
 # Timeline
 ## About
-Short description about project
+Timeline is a simple web application where you can add your own events.
+When you are login you can add events and categories for this events.
 
 ## Content
 - [App examples](./README.md#app-examples)
@@ -29,7 +30,7 @@ Short description about project
 - [Creation time](./README.md#creation-time)
 
 ## App examples
-Examples of use - short demo or screen
+Examples of use are in [folder](./external_files/app_examples)
 
 ## How to run the app?
 ### Environment
@@ -45,7 +46,7 @@ Examples of use - short demo or screen
 
 ### Database
 - Tinker
-- Insert directly in database. Here you can find [folder](./external-files) with examle data to insert.
+- Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
 
 ### Run the app
 Download files from githube from this repo
@@ -59,7 +60,7 @@ Download
 - Nodejs
 - Visual Studio (or any other IDE)
 
-Open app in IDE and run Apache and MySQL via XAMPP.
+Open app in IDE and run Apache and MySQL via XAMPP
 
 ## Sources
 
@@ -68,4 +69,4 @@ Open app in IDE and run Apache and MySQL via XAMPP.
 ## Note
 
 ## License
-[MIT license](https://opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT)
