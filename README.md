@@ -8,7 +8,7 @@
 </p>
 
 # Timeline
-![Application image - main page](./external_files/app_examples/main_page.png)
+![Application image - main page](./external_files/app_examples/1_main_page.png)
 
 ## About
 Timeline is a simple web application where you can add your own events.
