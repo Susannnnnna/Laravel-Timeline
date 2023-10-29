@@ -21,5 +21,8 @@ class WelcomeController extends Controller
         return view('welcome', [
             'categories' => EventCategory::all()
         ])->with('events', $events);
+
+        $event_categories = EventCategory::all();
+        return view('welcome',)->with('event_categories', $event_categories);
     }
 }

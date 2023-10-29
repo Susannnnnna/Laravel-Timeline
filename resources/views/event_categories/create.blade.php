@@ -5,33 +5,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Add event</div>
+                <div class="card-header">Add event category</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('events.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('event_categories.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">Title</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Category name</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" maxlength="500" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="event_date" class="col-md-4 col-form-label text-md-end">Event date</label>
-
-                        <div class="col-md-6">
-                                <input id="event_date" type="text" class="form-control @error('event_date') is-invalid @enderror" id="exampleFormControlInputEventDate" placeholder="YYYY-MM-DD" name="event_date" value="{{ old('event_date') }}" required autocomplete="event_date" autofocus>
-
-                                @error('event_date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -66,39 +52,7 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="category_id" class="col-md-4 col-form-label text-md-end">Category</label>
-
-                            <div class="col-md-6">
-                                <select id="category_id" class="form-control @error('category_id') is-invalid @enderror" name="category_id">
-                                    <option value="">-</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endforeach
-                                </select>
-                                @error('category_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="image_path" class="col-md-4 col-form-label text-md-end">Ilustration</label>
-
-                            <div class="col-md-6">
-                                <input id="image_path" type="file" class="form-control @error('image_path') is-invalid @enderror" name="image_path">
-
-                                @error('image_path')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
+                        
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-outline-primary">

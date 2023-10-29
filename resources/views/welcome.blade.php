@@ -28,7 +28,7 @@
                                 <div class="news-media">
                                     @if(!is_null($event->image_path))
                                     @else
-                                        <a class="colorbox cboxElement" href="https://protocol.bryanjohnson.co/DONT-DIE-by-Zero">
+                                        <a class="colorbox cboxElement" href="#">
                                             <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration">
                                         </a>
                                     @endif
@@ -47,7 +47,7 @@
                                 <div class="news-media gallery">
                                     @if(!is_null($event->image_path))
                                     @else
-                                    <a class="colorbox cboxElement" href="https://protocol.bryanjohnson.co/">
+                                    <a class="colorbox cboxElement" href="#">
                                         <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration_right">
                                     </a>
                                     <a class="colorbox cboxElement" href="#"></a>
