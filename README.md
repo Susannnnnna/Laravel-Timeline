@@ -45,7 +45,7 @@ Examples of use - short demo or screen
 
 ### Database
 - Tinker
-- Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
+- Insert directly in database. Here you can find [folder](./exteral_files) with examle data to insert.
 
 ### Run the app
 Download files from githube from this repo
