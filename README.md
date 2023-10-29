@@ -12,6 +12,7 @@
 
 ## About
 Timeline is a simple web application where you can add your own events.
+
 When you are login you can add events and categories for this events.
 
 ## Content
