@@ -38,7 +38,7 @@ Examples of use are in [folder](./external_files/app_examples)
 ### Used technologies
 - Laravel / Composer / XAMPP
 - PHP
-- Visual Studio
+- Visual Studio Code
 - Bootstrap
 - Nodejs
 - MySQL
@@ -57,7 +57,7 @@ Download
 - XAMPP
 - Composer
 - Nodejs
-- Visual Studio (or any other IDE)
+- Visual Studio Code (or any other IDE)
 
 Open app in IDE and run Apache and MySQL via XAMPP
 
