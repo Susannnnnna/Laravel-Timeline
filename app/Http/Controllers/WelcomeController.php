@@ -7,6 +7,7 @@ use App\Models\EventCategory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class WelcomeController extends Controller
 {
@@ -27,5 +28,14 @@ class WelcomeController extends Controller
 
         $event_categories = EventCategory::all();
         return view('welcome',)->with('event_categories', $event_categories);
+    }
+
+
+    public function generatePdf(Request $request) 
+    {
+        $events = Event::get();
+        $pdf = Pdf::loadView('pdf.download', compact('events'));
+        
+        return $pdf->stream('timeline-template'.time().'.pdf');
     }
 }

@@ -185,4 +185,16 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+        /*
+    |--------------------------------------------------------------------------
+    | Application dompdf
+    |--------------------------------------------------------------------------
+    |
+    | Dompdf is an HTML to PDF converter 
+    | The dompdf is (mostly) the CSS 2.1 compliant HTML layout and rendering engine written in PHP language.
+    | It is the style-driven renderer: it will download and read an external stylesheets, inline style tags, and all the style attributes of individual HTML elements. 
+    | It also supports most presentational HTML attributes.
+    |
+    */
+
 ];
