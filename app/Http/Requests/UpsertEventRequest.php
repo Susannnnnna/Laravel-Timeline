@@ -27,6 +27,7 @@ class UpsertEventRequest extends FormRequest
             'image_path' => 'nullable|image',
             'name' => 'required|max:500',
             'event_date' => 'required|date',
+            'event_end_date' => 'nullable|date',
             'link' => 'nullable|string',
             'description' => 'required|max:2000',
             'category_id' => 'nullable|integer|min:0'

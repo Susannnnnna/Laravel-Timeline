@@ -26,12 +26,26 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="event_date" class="col-md-4 col-form-label text-md-end">Event date</label>
+                            <label for="event_date" class="col-md-4 col-form-label text-md-end">Start date</label>
 
                         <div class="col-md-6">
                                 <input id="event_date" type="text" class="form-control @error('event_date') is-invalid @enderror" id="exampleFormControlInputEventDate" placeholder="YYYY-MM-DD" name="event_date" value="{{ old('event_date') }}" required autocomplete="event_date" autofocus>
 
                                 @error('event_date')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="event_end_date" class="col-md-4 col-form-label text-md-end">End date</label>
+
+                        <div class="col-md-6">
+                                <input id="event_end_date" type="text" class="form-control @error('event_end_date') is-invalid @enderror" id="exampleFormControlInputEventDate" placeholder="YYYY-MM-DD" name="event_end_date" value="{{ old('event_end_date') }}" autocomplete="event_date" autofocus>
+
+                                @error('event_end_date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

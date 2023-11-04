@@ -18,13 +18,16 @@ class WelcomeController extends Controller
      */
     public function index(Request $request)
     {
-        $filters = $request->query('filter');
-
-        $events = Event::all();
         return view('welcome', [
             'events' => Event::orderBy('event_date', 'ASC')->get(),
             'categories' => EventCategory::all()
-        ])->with('events', $events);
+        ]);
+
+        // $events = Event::all();
+        // return view('welcome', [
+        //     'events' => Event::orderBy('event_date', 'ASC')->get(),
+        //     'categories' => EventCategory::all()
+        // ])->with('events', $events);
 
         $event_categories = EventCategory::all();
         return view('welcome',)->with('event_categories', $event_categories);
@@ -33,7 +36,7 @@ class WelcomeController extends Controller
 
     public function generatePdf(Request $request) 
     {
-        $events = Event::get();
+        $events = Event::orderBy('event_date', 'ASC')->get();
         $pdf = Pdf::loadView('pdf.download', compact('events'));
         
         return $pdf->stream('timeline-template'.time().'.pdf');

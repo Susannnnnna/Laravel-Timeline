@@ -5,66 +5,39 @@
 <div class="container bootstrap snippets bootdey">
     <section id="news" class="white-bg padding-top-bottom">
         <div class="container bootstrap snippets bootdey">
-            <div class="row mb-3 ">
-                <label for="category_id" class="col-md-4 col-form-label text-md-end">Category</label>
-                <div class="col-md-3">
-                    <div class="col">
-                        <select id="category_id" class="form-control @error('category_id') is-invalid @enderror" name="category_id">
-                            @foreach($categories as $category)    
-                                <option value="{{ $category->id }}" >{{ $category->name }}</option>
-                                <label for="category_id" value="{{ $category->id }}" class="col-md-4 col-form-label text-md-end">{{ $category->description }}</label>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <div class="col">
-                    <a class="btn btn-primary" href="{{route('generate_pdf')}}">Export PDF</a>
-                </div>
+            <div class="col text-end">
+                <a class="btn btn-outline-primary" href="{{route('generate_pdf')}}">Export PDF</a>
             </div>
             
-            <div class="timeline">
-                @foreach($events as $event)
-                    <div class="row">
-                        <div class="col-sm-6 news-item">
-                            <div class="news-content">
-                                <div class="date">
-                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
-                                </div>
-                                <h2 class="news-title">{{ $event->name }}</h2>
-                                <div class="news-media">
-                                    @if(!is_null($event->image_path))
-                                    @else
-                                        <a class="colorbox cboxElement" href="#">
-                                            <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration">
-                                        </a>
-                                    @endif
-                                </div>
-                                <p>{{ $event->description }}</p>
-                                <a class="read-more" href="{{ $event->link }}">Read More</a>
+            <div class="container">
+                <div class="main-timeline">
+
+                    <!-- start experience section-->
+                    @foreach($events as $event)
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer">
+                                <span class="date">
+                                        <span class="month">{{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M') }}</span>
+                                <span class="year">{{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('Y') }}</span>
+                                </span>
                             </div>
                         </div>
-
-                        <div class="col-sm-6 news-item right">
-                            <div class="news-content">
-                                <div class="date">
-                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
-                                </div>
-                                <h2 class="news-title">{{ $event->name }}</h2>
-                                <div class="news-media gallery">
-                                    @if(!is_null($event->image_path))
-                                    @else
-                                    <a class="colorbox cboxElement" href="#">
-                                        <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration_right">
-                                    </a>
-                                    <a class="colorbox cboxElement" href="#"></a>
-                                    @endif
-                                </div>
-                                <p>{{ $event->description }}</p>
-                                <a class="read-more" href="{{ $event->link }}">Read More</a>
-                            </div>
+                        <div class="timeline-content">
+                            <h5 class="title"><a class="read-more" href="{{ $event->link }}">{{ $event->name }}</a></h5>
+                            @if(!is_null($event->event_end_date))
+                                <p class="text-secondary">till {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_end_date))->format('j F Y') }}</p>
+                            @endif
+                            <span class="badge bg-secondary">{{ $event->category->name }}</span>
+                            <p class="description">
+                                {{ $event->description }}
+                            </p>
                         </div>
                     </div>
-                @endforeach
+                    @endforeach
+                    <!-- end experience section-->
+                </div>
             </div>
         </div>
     </section>

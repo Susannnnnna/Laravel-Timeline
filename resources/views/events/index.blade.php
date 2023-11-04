@@ -24,7 +24,8 @@
             <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
-            <th scope="col">Event date</th>
+            <th scope="col">Start date</th>
+            <th scope="col">End date</th>
             <th scope="col">Description</th>
             <!-- <th scope="col">Link</th> -->
             <th scope="col">Category</th>
@@ -38,6 +39,7 @@
                     <th scope="row">{{ $event->id }}</th>
                     <td>{{ $event->name }}</td>
                     <td>{{ $event->event_date }}</td>
+                    <td>{{ $event->event_end_date }}</td>
                     <td>{{ $event->description }}</td>
                     <!-- <td>{{ $event->link }}</td> -->
                     <td>

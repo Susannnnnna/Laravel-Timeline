@@ -1,50 +1,19 @@
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-<div class="container bootstrap snippets bootdey">
-    <section id="news" class="white-bg padding-top-bottom">
-        <div class="container bootstrap snippets bootdey">
-            
-            <div class="timeline">
-                @foreach($events as $event)
-                    <div class="row">
-                        <div class="col-sm-6 news-item">
-                            <div class="news-content">
-                                <div class="date">
-                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
-                                </div>
-                                <h2 class="news-title">{{ $event->name }}</h2>
-                                <div class="news-media">
-                                    @if(!is_null($event->image_path))
-                                    @else
-                                        <a class="colorbox cboxElement" href="#">
-                                            <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration">
-                                        </a>
-                                    @endif
-                                </div>
-                                <p>{{ $event->description }}</p>
-                                <a class="read-more" href="{{ $event->link }}">Read More</a>
-                            </div>
-                        </div>
+<!-- <link href=" https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css " rel="stylesheet"> -->
+        
+<!-- Bootstrap Theme -->
+<link href="./resources/css/timelinePdf.css" rel="stylesheet" text="text/css" >
 
-                        <div class="col-sm-6 news-item right">
-                            <div class="news-content">
-                                <div class="date">
-                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j M Y') }}
-                                </div>
-                                <h2 class="news-title">{{ $event->name }}</h2>
-                                <div class="news-media gallery">
-                                    @if(!is_null($event->image_path))
-                                    @else
-                                    <a class="colorbox cboxElement" href="#">
-                                        <img class="img-responsive" src="{{ asset('storage/' . $event->image_path) }}" alt="ilustaration_right">
-                                    </a>
-                                    <a class="colorbox cboxElement" href="#"></a>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+@foreach($events as $event)
+<div class="card border-primary mb-3" style="max-width: 100rem;">
+    <div class="card-header">
+        {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_date))->format('j F Y') }}
+        @if(!is_null($event->event_end_date))- {{ \Carbon\Carbon::createFromTimestamp(strtotime($event->event_end_date))->format('j F Y') }}
+        @endif
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><a class="read-more" href="{{ $event->link }}">{{ $event->name }}</a></h4>    
+        <span class="badge bg-secondary">{{ $event->category->name }}</span>
+        <p class="card-text">{{ $event->description }}</p>
+    </div>
 </div>
+@endforeach
