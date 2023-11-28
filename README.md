@@ -66,4 +66,4 @@ Download
 Open app in IDE and run Apache and MySQL via XAMPP
 
 ## Note
-
+The data visible on the timeline is downloaded from entries available on the website: https://bryan-johnson.medium.com/
