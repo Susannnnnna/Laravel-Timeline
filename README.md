@@ -1,4 +1,4 @@
-# Timeline
+# Timeline - Laravel
 ![Application image - main page](./external_files/app_examples/1_main_page.png)
 
 ## About
