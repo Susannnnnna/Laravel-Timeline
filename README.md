@@ -48,7 +48,7 @@ Examples of use are in [folder](./external_files/app_examples)
 - Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
 
 ### Run the app
-Download files from githube from this repo
+Download files from github
 ```
 git clone https://github.com/Susannnnnna/Laravel_Timeline
 ```
