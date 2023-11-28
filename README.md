@@ -1,12 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 # Timeline
 ![Application image - main page](./external_files/app_examples/1_main_page.png)
 
@@ -22,14 +13,26 @@ When you are login you can add events and categories for this events.
   - [Used technologies](./README.md#used-technologies)
   - [Database](./README.md#database)
   - [Download the app](./README.md#download-the-app)
-- [Sources](./README.md#sources)
-- [Security](./README.md#security)
 - [Note](./README.md#note)
-- [License](./README.md#license)
-- [Creation time](./README.md#creation-time)
 
 ## App examples
 Examples of use are in [folder](./external_files/app_examples)
+
+![Application image](./external_files/app_examples/2_register_page.png)
+
+![Application image](./external_files/app_examples/3_home_page.png)
+
+![Application image](./external_files/app_examples/4_login_page.png)
+
+![Application image](./external_files/app_examples/5_users_list_auth_admin.png)
+
+![Application image](./external_files/app_examples/6_events_list_auth_user.png)
+
+![Application image](./external_files/app_examples/7_event_add_form_auth_user.png)
+
+![Application image](./external_files/app_examples/8_event_edit_form_auth_user.png)
+
+![Application image](./external_files/app_examples/9_event_category_list_auth_user.png)
 
 ## How to run the app?
 ### Environment
@@ -44,7 +47,7 @@ Examples of use are in [folder](./external_files/app_examples)
 - MySQL
 
 ### Database
-- Tinker
+- Tinker or
 - Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
 
 ### Run the app
@@ -58,14 +61,9 @@ Download
 - Composer
 - Nodejs
 - Visual Studio Code (or any other IDE)
+- Bootstrap
 
 Open app in IDE and run Apache and MySQL via XAMPP
 
-## Sources
-
-## Security
-
 ## Note
 
-## License
-[MIT license](https://opensource.org/licenses/MIT)
