@@ -18,22 +18,6 @@ When you are login you can add events and categories for this events.
 ## App examples
 Examples of use are in [folder](./external_files/app_examples)
 
-![Application image](./external_files/app_examples/2_register_page.png)
-
-![Application image](./external_files/app_examples/3_home_page.png)
-
-![Application image](./external_files/app_examples/4_login_page.png)
-
-![Application image](./external_files/app_examples/5_users_list_auth_admin.png)
-
-![Application image](./external_files/app_examples/6_events_list_auth_user.png)
-
-![Application image](./external_files/app_examples/7_event_add_form_auth_user.png)
-
-![Application image](./external_files/app_examples/8_event_edit_form_auth_user.png)
-
-![Application image](./external_files/app_examples/9_event_category_list_auth_user.png)
-
 ## How to run the app?
 ### Environment
 - Windows 11 Pro v22H2
