@@ -11,7 +11,7 @@ When you are login you can add events and categories for this events.
 - [How to run the app?](./README.md#how-to-run-the-app)
   - [Environment](./README.md#environment)
   - [Used technologies](./README.md#used-technologies)
-  - [Database](./README.md#database)
+  - [Database and data](./README.md#database-and-data)
   - [Download the app](./README.md#download-the-app)
 - [Note](./README.md#note)
 
@@ -46,9 +46,10 @@ Examples of use are in [folder](./external_files/app_examples)
 - Nodejs
 - MySQL
 
-### Database
-- Tinker or
-- Insert directly in database. Here you can find [folder](./external_files) with examle data to insert.
+### Database and data
+Database name: Timeline
+
+Example data to insert are located in [folder](./external_files).
 
 ### Run the app
 Download files from github
