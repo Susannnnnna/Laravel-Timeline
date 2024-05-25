@@ -52,3 +52,6 @@ Open app in IDE and run Apache and MySQL via XAMPP
 
 ## Note
 The data visible on the timeline are downloaded from events available on the website: https://bryan-johnson.medium.com/
+
+## License
+[MIT license](https://opensource.org/licenses/MIT)
